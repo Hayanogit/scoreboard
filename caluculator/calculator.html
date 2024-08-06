@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex items-center justify-center min-h-screen bg-blue-100">
+    <div class="bg-white p-4 rounded-lg shadow-md">
+        <div class="grid grid-cols-4 gap-2">
+            <input id="display" type="text" class="col-span-4 bg-gray-200 p-2 rounded-md text-right" readonly>
+            <button class="bg-white p-4 rounded-md border" onclick="appendValue('A')">A</button>
+            <button class="bg-white p-4 rounded-md border" onclick="appendValue('7')">7</button>
+            <button class="bg-white p-4 rounded-md border" onclick="appendValue('8')">8</button>
+            <button class="bg-white p-4 rounded-md border" onclick="appendValue('9')">9</button>
+            <button class="bg-white p-4 rounded-md border" onclick="appendValue('B')">B</button>
+            <button class="bg-white p-4 rounded-md border" onclick="appendValue('4')">4</button>
+            <button class="bg-white p-4 rounded-md border" onclick="appendValue('5')">5</button>
+            <button class="bg-white p-4 rounded-md border" onclick="appendValue('6')">6</button>
+            <button class="bg-white p-4 rounded-md border" onclick="appendValue('C')">C</button>
+            <button class="bg-white p-4 rounded-md border" onclick="appendValue('1')">1</button>
+            <button class="bg-white p-4 rounded-md border" onclick="appendValue('2')">2</button>
+            <button class="bg-white p-4 rounded-md border" onclick="appendValue('3')">3</button>
+            <button class="bg-white p-4 rounded-md border" onclick="appendValue('D')">D</button>
+            <button class="bg-white p-4 rounded-md border" onclick="appendValue('T')">T</button>
+            <button class="bg-white p-4 rounded-md border col-span-2" onclick="clearDisplay()">クリア</button>
+        </div>
+        <div class="grid grid-cols-4 gap-2 mt-2">
+            <button class="bg-red-500 text-white p-4 rounded-md border" onclick="deleteLastCharacter()">Delete</button>
+        </div>
+    </div>
+
+    <script>
+        function appendValue(value) {
+            document.getElementById('display').value += value;
+        }
+
+        function clearDisplay() {
+            document.getElementById('display').value = '';
+        }
+
+        function deleteLastCharacter() {
+            let display = document.getElementById('display');
+            display.value = display.value.slice(0, -1);
+        }
+    </script>
+</body>
+</html>

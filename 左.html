@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Recreation</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 p-4">
+    <div class="max-w-md mx-auto bg-white p-4 rounded shadow">
+        <div class="grid grid-cols-3 gap-2 mb-4">
+            <button class="bg-blue-200 p-2 rounded">真ん中</button>
+            <button class="bg-blue-200 p-2 rounded">つり球</button>
+            <button class="bg-blue-200 p-2 rounded">PO</button>
+            <button class="bg-blue-200 p-2 rounded">内角</button>
+            <button class="bg-blue-200 p-2 rounded">外角</button>
+            <div class="grid justify-start justify-items-center grid-cols-2">
+                <button class="bg-white m-1 border rounded border-yellow-500">配球<br>表示</button>
+                <button class="bg-white m-1 border rounded border-yellow-500">視点<br>切替</button>
+            </div>
+        </div>
+        <div class="grid grid-cols-2">
+            <div class="grid grid-rows-4 m-1 w-1/2">
+                <button class="bg-white m-1 border rounded border-blue-500">逆球</button>
+                <button class="bg-white m-1 border rounded border-blue-500">ワン<br>バン</button>
+                <div class=""></div>
+                <button class="bg-white m-1 border rounded border-blue-500">投球<br>クリア</button>
+            </div>
+            <div class="flex justify-center items-center mb-4">
+                <div class="relative">
+                    <div class="absolute inset-0 flex justify-center items-center">
+                        <div class="grid grid-rows-3 grid-cols-3 w-24 h-24 border">
+                            <div class="border"></div>
+                            <div class="border"></div>
+                            <div class="border"></div>
+                            <div class="border"></div>
+                            <div class="border"></div>
+                            <div class="border"></div>
+                            <div class="border"></div>
+                            <div class="border"></div>
+                            <div class="border"></div>
+                        </div>
+                    </div>
+                    <img src="https://via.placeholder.com/200" alt="placeholder" class="w-48 h-48 opacity-50">
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 justify-items-stretch">
+            <div class="grid grid-cols-3 gap-2 m-1 border rounded border-blue-500">
+                <div class="flex items-center justify-center bg-gray-100 p-2 m-1 rounded col-span-3">
+                    <span class="text-4xl">1</span> <span>km</span>
+                </div>
+                <button class="bg-white p-2 m-1 border rounded border-black-500">7</button>
+                <button class="bg-white p-2 m-1 border rounded border-black-500">8</button>
+                <button class="bg-white p-2 m-1 border rounded border-black-500">9</button>
+                <button class="bg-white p-2 m-1 border rounded border-black-500">4</button>
+                <button class="bg-white p-2 m-1 border rounded border-black-500">5</button>
+                <button class="bg-white p-2 m-1 border rounded border-black-500">6</button>
+                <button class="bg-white p-2 m-1 border rounded border-black-500">1</button>
+                <button class="bg-white p-2 m-1 border rounded border-black-500">2</button>
+                <button class="bg-white p-2 m-1 border rounded border-black-500">3</button>
+                <button class="bg-white p-2 m-1 border rounded border-black-500">0</button>
+                <button class="bg-white p-2 m-1 col-span-2 border rounded border-black-500">クリア</button>
+            </div>
+            <div class="grid grid-cols-2 gap-2 mb-4 m-1 border rounded border-blue-500">
+                <button class="bg-blue-200 p-2 m-1 rounded">ストレート</button>
+                <button class="bg-blue-200 p-2 m-1 rounded">カーブ</button>
+                <button class="bg-blue-200 p-2 m-1 rounded">カットボール</button>
+                <button class="bg-blue-200 p-2 m-1 rounded">ツーシーム</button>
+                <button class="bg-blue-200 p-2 m-1 rounded">スライダー</button>
+                <button class="bg-blue-200 p-2 m-1 rounded">シンカー</button>
+                <button class="bg-blue-200 p-2 m-1 rounded">フォーク</button>
+                <button class="bg-blue-200 p-2 m-1 rounded">特殊球</button>
+                <button class="bg-blue-200 p-2 m-1 rounded">チェンジアップ</button>
+                <button class="bg-blue-200 p-2 m-1 rounded">スプリット</button>
+            </div>
+            <div class="h-1/3"></div>
+            <div class="grid grid-cols-2 gap-2 mb-4 m-1 border rounded border-gray-500">
+                <button class="bg-white p-2 m-1 border rounded border-gray-500">敬遠</button>
+                <button class="bg-white p-2 m-1 border rounded border-gray-500">申告敬遠</button>
+            </div>
+        </div>
+        <div class="grid grid-cols-4 gap-2 border rounded border-blue-500">
+            <button class="bg-blue-200 p-2 m-1 rounded">空振り</button>
+            <button class="bg-blue-200 p-2 m-1 rounded">見逃し</button>
+            <button class="bg-blue-200 p-2 m-1 rounded">ボール</button>
+            <button class="bg-blue-200 p-2 m-1 rounded">ファウル</button>
+        </div>
+        <div class="grid grid-cols-3 gap-1">
+            <div class="grid grid-rows-2 m-1">
+                <button class="bg-white p-2 m-1 border rounded border-blue-500">暴投</button>
+                <button class="bg-white p-2 m-1 border rounded border-blue-500">捕逸</button>
+            </div>
+            <div class="grid grid-rows-2 m-1">
+                <button class="bg-white p-2 m-1 border rounded border-blue-500">ボーク</button>
+                <button class="bg-white p-2 m-1 border rounded border-blue-500">反則投球</button>
+            </div>
+            <div class="grid grid-rows-2 m-1">
+                <button class="bg-white p-2 m-1 border rounded border-blue-500">バント</button>
+                <button class="bg-white p-2 m-1 border rounded border-blue-500">タッチアップ</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

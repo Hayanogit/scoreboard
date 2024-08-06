@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カウント表示</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .circle-button {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background-color: #e5e7eb; /* gray-200 */
+            border: 1px solid #d1d5db; /* gray-300 */
+            transition: background-color 0.3s ease;
+        }
+
+        .circle-button.active-b {
+            background-color: #10b981; /* green-500 */
+        }
+
+        .circle-button.active-s {
+            background-color: #fbbf24; /* yellow-400 */
+        }
+
+        .circle-button.active-o {
+            background-color: #ef4444; /* red-500 */
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 p-6 flex items-center justify-center min-h-screen">
+    <div class="max-w-4xl mx-auto bg-white p-4 rounded-lg shadow-md">
+        <div class="grid grid-cols-6 gap-4">
+            <div class="col-span-2">
+                <div class="grid grid-rows-3 gap-2">
+                    <div class="flex items-center">
+                        <span class="font-bold mr-2">B</span>
+                        <button class="circle-button" onclick="toggleClass(this, 'active-b')"></button>
+                        <button class="circle-button" onclick="toggleClass(this, 'active-b')"></button>
+                        <button class="circle-button" onclick="toggleClass(this, 'active-b')"></button>
+                        <button class="circle-button" onclick="toggleClass(this, 'active-b')"></button>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="font-bold mr-2">S</span>
+                        <button class="circle-button" onclick="toggleClass(this, 'active-s')"></button>
+                        <button class="circle-button" onclick="toggleClass(this, 'active-s')"></button>
+                        <button class="circle-button" onclick="toggleClass(this, 'active-s')"></button>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="font-bold mr-2">O</span>
+                        <button class="circle-button" onclick="toggleClass(this, 'active-o')"></button>
+                        <button class="circle-button" onclick="toggleClass(this, 'active-o')"></button>
+                        <button class="circle-button" onclick="toggleClass(this, 'active-o')"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-4 grid grid-rows-2 gap-2">
+                <div class="grid grid-cols-2 gap-2">
+                    <div class="border p-2 flex justify-between items-center">
+                        <span class="font-bold">打席数</span>
+                        <input type="text" class="border rounded p-1 w-16 text-right">
+                    </div>
+                    <div class="border p-2 flex justify-between items-center">
+                        <span class="font-bold">安打</span>
+                        <input type="text" class="border rounded p-1 w-16 text-right">
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <div class="border p-2 flex justify-between items-center">
+                        <span class="font-bold">投球数</span>
+                        <input type="text" class="border rounded p-1 w-16 text-right">
+                    </div>
+                    <div class="border p-2 flex justify-between items-center">
+                        <span class="font-bold">打点</span>
+                        <input type="text" class="border rounded p-1 w-16 text-right">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleClass(element, className) {
+            element.classList.toggle(className);
+        }
+    </script>
+</body>
+
+</html>

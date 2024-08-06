@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PitchBase System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .square-button {
+            width: 100%;
+            padding-bottom: 100%;
+            position: relative;
+        }
+
+        .square-button span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body class="bg-blue-900 text-gray-900">
+
+    <!-- Container -->
+    <div class="container mx-auto p-4 space-y-4">
+
+        <!-- Top Section -->
+        <div class="grid grid-cols-2 gap-2">
+            <div class="col-span-8 flex items-center space-x-4">
+                <div class="bg-white p-4 rounded-lg shadow-md flex-none w-96">
+                    <div class="grid grid-cols-6 gap-2">
+                        <button class="bg-white-200 p-4 rounded-lg shadow-md">分析対象外</button>
+                        <button class="bg-gray-200 p-2 rounded-lg shadow-md">投手<input type="text" class="col-span-12 bg-gray-100 p-1 rounded-lg shadow-md"></button>
+                        <button class="bg-gray-200 p-2 rounded-lg shadow-md">打者<input type="text" class="col-span-1 bg-gray-100 p-2 rounded-lg shadow-md"></button>
+                        <button class="col-span-1 bg-blue-500 text-white p-2 rounded-lg shadow-md">選手交代</button>
+                        <input type="text" class="col-span-1 bg-gray-100 p-2 rounded-lg shadow-md" placeholder="打席数">
+                        <input type="text" class="col-span-1 bg-gray-100 p-2 rounded-lg shadow-md" placeholder="安打">
+                        <input type="text" class="col-span-1 bg-gray-100 p-2 rounded-lg shadow-md" placeholder="投げ">
+                        <input type="text" class="col-span-1 bg-gray-100 p-2 rounded-lg shadow-md" placeholder="打席">
+                        <input type="text" class="col-span-1 bg-gray-100 p-2 rounded-lg shadow-md" placeholder="順">
+                        <input type="text" class="col-span-1 bg-gray-100 p-2 rounded-lg shadow-md" placeholder="守">
+                        <input type="text" class="col-span-1 bg-gray-100 p-2 rounded-lg shadow-md" placeholder="名前">
+                    </div>
+                </div>
+                <div class="col-span-3 bg-white p-4 rounded-lg shadow-md text-center">
+                    <div class="grid grid-cols-1 gap-2">
+                        <input type="text" class="bg-gray-100 p-2 rounded-lg shadow-md" placeholder="大学名">
+                        <input type="text" class="bg-gray-100 p-2 rounded-lg shadow-md" placeholder="得点">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Section -->
+        <div class="grid grid-cols-12 gap-4">
+
+            <!-- Left Section -->
+            <div class="col-span-3 space-y-4">
+                <div class="bg-white p-4 rounded-lg shadow-md space-y-2 text-center">
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md w-full">逆球</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md w-full">ワンバン</button>
+                    <button class="bg-red-500 text-white p-2 rounded-lg shadow-md w-full">投球クリア</button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md grid grid-cols-2 gap-2 text-center">
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">ストレート</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">カーブ</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">カットボール</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">ツーシーム</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">スライダー</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">シンカー</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">フォーク</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">特球</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">スプリット</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">チェンジアップ</button>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md grid grid-cols-3 gap-2 text-center">
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">7</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">8</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">9</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">4</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">5</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">6</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">1</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">2</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">3</button>
+                </div>
+            </div>
+
+            <!-- Center Section -->
+            <div class="col-span-6 space-y-4">
+                <div class="bg-white p-4 rounded-lg shadow-md text-center space-y-2">
+                    <div>直ん中</div>
+                    <div>つり球</div>
+                    <div>PO</div>
+                    <div>投球</div>
+                    <div>ボール</div>
+                    <div>捕手</div>
+                    <div>エラー</div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md grid grid-cols-3 gap-2 text-center">
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">凡打</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">邪飛</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">失策出塁</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">併殺打</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">併殺打</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">三重打</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">単打</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">二重打</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">死球</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">犠打</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">本塁打</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">エンタイトルツーベース</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">投手失敗</button>
+                    <button class="bg-gray-200 p-2 rounded-lg shadow-md">野選</button>
+                </div>
+                <div class="flex flex-col items-center space-y-4">
+                    <button class="square-button bg-red-500 text-white rounded-lg shadow-md">
+                        <span>アウト</span>
+                    </button>
+                    <button class="bg-red-500 text-white w-full py-2 rounded-lg shadow-md">確定</button>
+                </div>
+            </div>
+
+            <!-- Right Section -->
+            <div class="col-span-3 space-y-4">
+                <div class="bg-white p-4 rounded-lg shadow-md text-center space-y-2">
+                    <div>A</div>
+                    <div>B</div>
+                    <div>C</div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <div>打点</div>
+                    <div>得点</div>
+                </div>
+                <button class="bg-yellow-500 text-white px-4 py-2 rounded-lg shadow-md w-full">選手表示</button>
+                <button class="bg-yellow-500 text-white px-4 py-2 rounded-lg shadow-md w-full">ランナー変更取消</button>
+            </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="grid grid-cols-12 gap-4">
+            <button class="col-span-2 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md">空振り</button>
+            <button class="col-span-2 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md">見逃し</button>
+            <button class="col-span-2 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md">ボール</button>
+            <button class="col-span-2 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md">ファウル</button>
+            <button class="col-span-2 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md">バント</button>
+            <button class="col-span-2 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md">タッチアップ</button>
+        </div>
+        <div class="grid grid-cols-12 gap-4 mt-4">
+            <button class="col-span-2 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md">要確認</button>
+            <button class="col-span-2 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md">クリア</button>
+            <button class="col-span-2 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md">←先頭</button>
+            <button class="col-span-2 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md">一球前</button>
+            <button class="col-span-2 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md">一球後</button>
+            <button class="col-span-2 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md">最後→</button>
+        </div>
+    </div>
+</body>
+
+</html>

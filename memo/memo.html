@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategy and Memo</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .disabled {
+            background-color: #f0f0f0;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-blue-100">
+    <div class="flex flex-col space-y-4 p-4 bg-white rounded-lg shadow-lg">
+        <div class="flex items-center space-x-2">
+            <textarea id="strategy" class="w-64 h-32 p-2 border border-gray-300 rounded-md disabled" disabled></textarea>
+            <button id="edit-strategy" class="h-32 bg-white text-black px-4 py-2 border-4 border-blue-500 rounded-md">作戦</button>
+        </div>
+        <div class="flex items-center space-x-2">
+            <textarea id="memo" class="w-64 h-32 p-2 border border-gray-300 rounded-md disabled" disabled></textarea>
+            <button id="edit-memo" class="h-32 bg-white text-black px-4 py-2 border-4 border-blue-500 rounded-md">メモ</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('edit-strategy').addEventListener('click', function() {
+            const strategyTextarea = document.getElementById('strategy');
+            strategyTextarea.disabled = !strategyTextarea.disabled;
+            strategyTextarea.classList.toggle('disabled');
+        });
+
+        document.getElementById('edit-memo').addEventListener('click', function() {
+            const memoTextarea = document.getElementById('memo');
+            memoTextarea.disabled = !memoTextarea.disabled;
+            memoTextarea.classList.toggle('disabled');
+        });
+    </script>
+</body>
+</html>
